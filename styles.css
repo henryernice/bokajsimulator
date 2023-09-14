@@ -1,0 +1,25 @@
+.cendiv{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+body{
+    background-color:rgb(135, 96, 32);
+}
+
+.italic{
+    font-style: italic;
+    color: rgb(234, 255, 0);
+}
+
+.moan{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #034d85;
+    padding: 1.1rem 3.4rem;
+    border-radius: .2rem;
+    transition: opacity .2s;
+}
