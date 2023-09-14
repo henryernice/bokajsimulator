@@ -1,4 +1,11 @@
+@font-face {
+    font-family: comic-sans;
+    src: url(comic-sans.woff);
+}
+
+
 .cendiv{
+    font-family: comic-sans;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -6,12 +13,13 @@
 }
 
 body{
+    font-family: fantasy;
     background-color:rgb(135, 96, 32);
 }
 
 .italic{
     font-style: italic;
-    color: rgb(234, 255, 0);
+    color: rgb(159, 18, 18);
 }
 
 .moan{
