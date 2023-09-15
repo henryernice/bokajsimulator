@@ -53,7 +53,7 @@ function updateScore() {
 
     } else {
         setCookie("pickaxe", 0, 3650);
-        pickaxe = 0;
+        setpickaxe(0, 0);
 
     }
 
