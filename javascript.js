@@ -14,6 +14,7 @@ function getCookie(cname) {
     return "";
   }
 
+
 const audio = new Audio("./cat-meow-14536.mp3");
 
 const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./moan3.mp3"),new Audio("./moan4.mp3"),new Audio("./moan5.mp3"),new Audio("./moan6.mp3")]
@@ -23,7 +24,7 @@ var pickaxe = 0;
 var sword = 0;
 
 var score = parseInt(getCookie("score"));
-if (score == "NAN"){
+if (getCookie("score") == "") {
     score = 0;
     setCookie("score", "0", 10000);
 }
@@ -111,4 +112,6 @@ function moan(){
         compliments.innerText = "Intet andet end en begynder.";
     }
     setCookie("score", String(score), 10000);
+    console.log(score);
+    console.log(getCookie("score"));
 }
