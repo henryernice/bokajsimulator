@@ -49,6 +49,18 @@ function updateScore() {
   } 
 
 
+// function checkCookie() {
+//     let user = getCookie("username");
+//     if (user != "") {
+//       alert("Welcome again " + user);
+//     } else {
+//       user = prompt("Please enter your name:", "");
+//       if (user != "" && user != null) {
+//         setCookie("username", user, 365);
+//       }
+//     }
+//   } 
+
 function setpickaxe(index, cost){
     var pickaxeimg = document.getElementById("pickaxe");
     if (pickaxe < index && score >= cost) {
@@ -115,5 +127,4 @@ function moan(){
     else if (score > 100) {
         compliments.innerText = "Intet andet end en begynder.";
     }
-    updateScore();
 }
