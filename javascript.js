@@ -91,7 +91,6 @@ function setpickaxe(index, cost){
     var pickaxeimg = document.getElementById("pickaxe");
     if (pickaxe < index && score >= cost) {
         pickaxe = index;
-        setCookie("pickaxe", pickaxe, 3650);
         score -= cost + 1;
         moan()
         updateScore();
@@ -111,6 +110,7 @@ function setpickaxe(index, cost){
             pickaxeimg.src = "borgir.jpg"
         }
     }
+    setCookie("pickaxe", pickaxe, 3650);
 }
 function setsword(index, cost){
     if (sword < index && score >= cost) {
