@@ -52,7 +52,7 @@ function updateScore() {
         setpickaxe(parseInt(pickaxe_));
 
     } else {
-        setCookie("pickaxe_", 0, 3650);
+        setCookie("pickaxe", 0, 3650);
         pickaxe = 0;
 
     }
@@ -91,6 +91,7 @@ function setpickaxe(index, cost){
     var pickaxeimg = document.getElementById("pickaxe");
     if (pickaxe < index && score >= cost) {
         pickaxe = index;
+        setCookie("pickaxe", pickaxe, 3650);
         score -= cost + 1;
         moan()
         updateScore();
