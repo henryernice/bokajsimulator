@@ -40,13 +40,28 @@ function updateScore() {
     let score_ = getCookie("score");
     if (score_ != "") {
         score = parseInt(score_);
-        console.log("Score cookie found")
+
     } else {
         setCookie("score", 0, 3650);
         score = 0;
-        console.log("Score cookie not found");
+
     }
-    console.log(getCookie("score"));
+    
+    let pickaxe_ = getCookie("pickaxe");
+    if (pickaxe_ != "") {
+        pickaxe = parseInt(pickaxe_);
+
+    } else {
+        setCookie("pickaxe_", 0, 3650);
+        pickaxe = 0;
+
+    }
+
+    var scorecounter = document.getElementById("counter");
+    scorecounter.innerText = "Stønne score: " + String(score);
+
+    setCookie("score", String(score), 3650);
+
   } 
 
   function deleteAllCookies() {
@@ -78,6 +93,7 @@ function setpickaxe(index, cost){
         pickaxe = index;
         score -= cost + 1;
         moan()
+        updateScore();
         if (index == 1){
             pickaxeimg.src = "FOWTNAITPIKAX.jpg"
         }
