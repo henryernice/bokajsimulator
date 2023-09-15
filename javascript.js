@@ -23,7 +23,7 @@ var pickaxe = 0;
 var sword = 0;
 
 var score = parseInt(getCookie("score"));
-if (score = "NAN"){
+if (score == "NAN"){
     score = 0;
     setCookie("score", "0", 10000);
 }
