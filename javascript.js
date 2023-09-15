@@ -12,7 +12,7 @@ function getCookie(cname) {
       }
     }
     return "";
-  }
+}
 
 
 const audio = new Audio("./cat-meow-14536.mp3");
