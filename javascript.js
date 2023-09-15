@@ -39,7 +39,7 @@ function setCookie(cname, cvalue, exdays) {
 function updateScore() {
     let score_ = getCookie("score");
     if (score_ != "") {
-        score = score_;
+        score = parseInt(score_);
         console.log("Score cookie found")
     } else {
         setCookie("score", 0, 3650);
