@@ -43,7 +43,8 @@ function updateScore() {
         console.log("Score cookie found")
     } else {
         setCookie("score", 0, 3650);
-        console.log("Score cookie not found")
+        score = 0;
+        console.log("Score cookie not found");
     }
     console.log(getCookie("score"));
   } 
