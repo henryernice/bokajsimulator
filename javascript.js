@@ -49,7 +49,7 @@ function updateScore() {
     
     let pickaxe_ = getCookie("pickaxe");
     if (pickaxe_ != "") {
-        pickaxe = parseInt(pickaxe_);
+        setpickaxe(parseInt(pickaxe_));
 
     } else {
         setCookie("pickaxe_", 0, 3650);
