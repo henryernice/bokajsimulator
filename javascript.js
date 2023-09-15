@@ -27,6 +27,7 @@ var score = parseInt(getCookie("score"));
 if (getCookie("score") == "") {
     score = 0;
     setCookie("score", "0", 10000);
+    console.log("No cookies. Cookie set")
 }
 console.log(score);
 // const buttons = document.querySelectorAll("button");
