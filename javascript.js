@@ -14,7 +14,6 @@ function getCookie(cname) {
     return "";
 }
 
-
 const audio = new Audio("./cat-meow-14536.mp3");
 
 const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./moan3.mp3"),new Audio("./moan4.mp3"),new Audio("./moan5.mp3"),new Audio("./moan6.mp3")]
