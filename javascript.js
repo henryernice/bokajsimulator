@@ -21,4 +21,17 @@ function moan(){
     scorecounter.innerText = "Moan score: " + String(score);
     let num = Math.ceil(Math.random()+0.5);
     moans[num-1].play();
+    var compliments = document.getElementById("compliment");
+    if (score > 2500) {
+        compliments.innerText = "You are a horny god.";
+    }
+    else if (score > 1250) {
+        compliments.innerText = "Bokaj is proud.";
+    }
+    else if (score > 500) {
+        compliments.innerText = "You are getting good at this.";
+    }
+    else if (score > 100) {
+        compliments.innerText = "Beginner.";
+    }
 }
