@@ -46,7 +46,7 @@ function updateScore() {
         score = 0;
 
     }
-    
+    console.log("Pickaxe at start", getCookie("pickaxe"))
     let pickaxe_ = getCookie("pickaxe");
     if (pickaxe_ != "") {
         setpickaxe(parseInt(pickaxe_));
