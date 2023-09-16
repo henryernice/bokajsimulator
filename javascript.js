@@ -50,10 +50,11 @@ function updateScore() {
     let pickaxe_ = getCookie("pickaxe");
     if (pickaxe_ != "") {
         setpickaxe(parseInt(pickaxe_));
-
+        console.log("Got pickaxe from cookie");
     } else {
         setCookie("pickaxe", "0", 3650);
         setpickaxe(0, 0);
+        console.log("Created new cookie cuz im new or code bad");
 
     }
 
