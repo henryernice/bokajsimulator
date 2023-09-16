@@ -49,7 +49,7 @@ function updateScore() {
     console.log("Pickaxe at start", getCookie("pickaxe"))
     let pickaxe_ = getCookie("pickaxe");
     if (pickaxe_ != "") {
-        setpickaxe(parseInt(pickaxe_));
+        setpickaxe(parseInt(pickaxe_), 0);
         console.log("Got pickaxe from cookie");
     } else {
         setCookie("pickaxe", "0", 3650);
@@ -57,6 +57,7 @@ function updateScore() {
         console.log("Created new cookie cuz im new or code bad");
 
     }
+    console.log("After cookies, pickaxe (cookie): ", getCookie("pickaxe"), " Var pickaxe: ", pickaxe);
 
     var scorecounter = document.getElementById("counter");
     scorecounter.innerText = "Stønne score: " + String(score);
