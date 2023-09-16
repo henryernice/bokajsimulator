@@ -14,6 +14,8 @@ var pickaxeimg = document.getElementById("pickaxe");
 
 console.log("JS running");
 
+
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -111,6 +113,18 @@ function setpickaxe(index, cost){
         else if (index == 5){
             pickaxeimg.src = "borgir.jpg"
         }
+        else if (index == 6){
+            pickaxeimg.src = "LOOK MOM I MADE IMG.jpg"
+        }
+        else if (index == 7){
+            pickaxeimg.src = "Windows-XP.jpg"
+        }
+        else if (index == 8){
+            pickaxeimg.src = "warcrime-er 6000.jpg"
+        }
+        else if (index == 9){
+            pickaxeimg.src = "Gold pikax.jpg"
+        }
     }
     setCookie("pickaxe", String(pickaxe), 3650);
 }
@@ -124,6 +138,7 @@ function setsword(index, cost){
 
 
 function moan(){
+
     console.log("score: ",score);
     console.log("pikax: ",pickaxe);
 
@@ -139,8 +154,17 @@ function moan(){
 
     newmoan.play()
     var compliments = document.getElementById("compliment");
-    if (score > 500000) {
+    if (score > 10000000) {
+        compliments.innerText = "Du gjorde det fandme. Jeg har ondt af dig.";
+    }
+    if (score > 5000000) {
         compliments.innerText = "https://psykologeridanmark.dk";
+    }
+    if (score > 1000000) {
+        compliments.innerText = "Du deltager nu i bandeskyderier om Cookie clicker VS Bokaj Simulator";
+    }
+    if (score > 500000) {
+        compliments.innerText = "Du har spillet Bokaj Simulator så lang tid at du har glemt hvordan man læser";
     }
     else if (score > 100000) {
         compliments.innerText = "Du er en liderlig gud.";
