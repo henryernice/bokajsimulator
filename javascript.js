@@ -52,7 +52,7 @@ function updateScore() {
         setpickaxe(parseInt(pickaxe_));
 
     } else {
-        setCookie("pickaxe", 0, 3650);
+        setCookie("pickaxe", "0", 3650);
         setpickaxe(0, 0);
 
     }
