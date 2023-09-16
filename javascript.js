@@ -42,7 +42,7 @@ function updateScore() {
         score = parseInt(score_);
 
     } else {
-        setCookie("score", 0, 3650);
+        setCookie("score", "0", 3650);
         score = 0;
 
     }
@@ -92,8 +92,8 @@ function setpickaxe(index, cost){
     if (pickaxe < index && score >= cost) {
         pickaxe = index;
         score -= cost + 1;
+        setCookie("score", score, 3650)
         moan()
-        updateScore();
         if (index == 1){
             pickaxeimg.src = "FOWTNAITPIKAX.jpg"
         }
@@ -110,7 +110,7 @@ function setpickaxe(index, cost){
             pickaxeimg.src = "borgir.jpg"
         }
     }
-    setCookie("pickaxe", pickaxe, 3650);
+    setCookie("pickaxe", String(pickaxe), 3650);
 }
 function setsword(index, cost){
     if (sword < index && score >= cost) {
@@ -122,6 +122,9 @@ function setsword(index, cost){
 
 
 function moan(){
+    console.log("score: ",score);
+    console.log("pikax: ",pickaxe);
+
     var scorecounter = document.getElementById("counter");
     score += powers[pickaxe];
     scorecounter.innerText = "Stønne score: " + String(score);
