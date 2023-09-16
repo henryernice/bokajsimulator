@@ -51,11 +51,11 @@ function updateScore() {
     if (pickaxe_ != "") {
         setpickaxe(parseInt(pickaxe_));
 
-    } /*else {
+    } else {
         setCookie("pickaxe", "0", 3650);
         setpickaxe(0, 0);
 
-    }*/
+    }
 
     var scorecounter = document.getElementById("counter");
     scorecounter.innerText = "Stønne score: " + String(score);
@@ -130,7 +130,7 @@ function moan(){
     scorecounter.innerText = "Stønne score: " + String(score);
 
     setCookie("score", String(score), 3650);
-    console.log(getCookie("score"));
+    console.log(getCookie("pickaxe"));
 
     let num = Math.ceil(Math.random()*6)
     var newmoan = moans[num-1]
