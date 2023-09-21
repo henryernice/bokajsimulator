@@ -152,6 +152,10 @@ function moan(){
     let num = Math.ceil(Math.random()*6)
     var newmoan = moans[num-1]
 
+    function onstart() {
+        document.onkeydown = function(event) {};
+    }
+
     newmoan.play()
     var compliments = document.getElementById("compliment");
     if (score > 10000000) {
