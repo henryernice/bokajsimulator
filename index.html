@@ -1,5 +1,44 @@
 <html>
-  <body>
-    <h1>Make thing work</h1>
+  <head>
+    <title> BOKAJ SIMULATOR </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+    <link rel="icon" type="image/x-icon" href="Bokaj.ico">
+  </head>
+  
+  <body onload="updateScore()">
+    <div class="cendiv">
+      <h1>VELKOMMEN TIL BOKAJ SIMULATOR!</h1>
+      <button onmousedown="moan()" id="bokajimg"><img src="Bokaj.png" alt="Bokaj"></button>
+      <p id="counter">Stønne score: 0  </p>
+      <p id="megacounter">MegaMoans: 0  </p><button id="megabuy"class="noicebutton" onclick="buymegamoan()">Køb 1 MegaMoan for 1000000000 støn</button>
+      <p id="compliment">Du er ny til Bokaj.</p>
+      <p>Din pikax: <img src="Bokaj.ico" id="pickaxe"width="100" height="100"></p>
+      <p>Hebraisk betydning: </p>
+      <p class="italic">"Den som fatter om pølsen".</p>
+      <p>Den store 300 pund kriger, Bokaj er en mester i den ædle sport, boksning.</p><br>
+      <h2>BOKAJ ITM SHTOP</h2>
+    </div>
+    <div class="inline"></div>
+      <img src="fortitemshop.jpg" alt="itemshop" width="100%">
+      <div>
+        <button class="sidebyside" onclick="setpickaxe(1, 500)"><img src="FOWTNAITPIKAX.jpg" alt="PIKAX" width="300px" height="300px"><br><p>PIKAX, 500</p></button>
+        <button class="sidebyside" onclick="setpickaxe(2, 2000)"><img src="pikaxstel.png" alt="Pikax, but steel" width="300px" height="300px"><br><p>Pikax, but zoom meeting, 2000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(3, 10000)"><img src="kinda cool pikax.webp" alt="Kinda cool pikax" width="300px" height="300px"><br><p>kinda cool pikax, 10000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(4, 25000)"><img src="minecraft ender pikax.jpg" alt="ender pikax" width="300px" height="300px"><br><p>minecraft ender pikax, 25000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(5, 100000)"><img src="borgir.jpg" alt="burger" width="300px" height="300px"><br><p>sexy hamburger, 100000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(6, 400000)"><img src="LOOK MOM I MADE IMG.jpg" alt="Someone did something to this, 400000" width="300px" height="300px"><br><p>Someone did something to this, 400000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(7, 1000000)"><img src="Windows-XP.jpg" alt="Windows-XP" width="300px" height="300px"><br><p>windows xp, 1000000 (IRL PRICE)</p></button>
+        <button class="sidebyside" onclick="setpickaxe(8, 3000000)"><img src="warcrime-er 6000.jpg" alt="warcrime-er 6000" width="300px" height="300px"><br><p>warcrime-er 6000, 3000000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(9, 10000000)"><img src="Gold pikax.jpg" alt="Gold pikax" width="300px" height="300px"><br><p>Golden pikax, 10000000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(10, 20000000)"><img src="axe.png" alt="ax" width="300px" height="300px"><br><p>ax, 20000000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(11, 100000000)"><img src="cave drawings.jpg" alt="cave drawings" width="300px" height="300px"><br><p>cave drawings, 100000000</p></button>
+        <button class="sidebyside" onclick="setpickaxe(12, 500000000)"><img src="nerd.jpg" alt="nerd" width="300px" height="300px"><br><p>nerd, 500000000</p></button>
+        
+      </div>
+      
+      
+<!-- abcdefghijklmnop-->
+      <!-- <button class="sidebyside" onclick="setsword(1, 500)"><img src="STIK.webp" alt="PIKAX (Pikax)" width="300px" height="300px"><br><p>STIK</p></button> -->
   </body>
 </html>
