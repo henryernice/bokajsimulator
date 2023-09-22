@@ -94,48 +94,53 @@ function updateScore() {
 }
 
 
-function setpickaxe(index, cost){
+function setpickaxe(index, cost, megacost = 0){
     var pickaxeimg = document.getElementById("pickaxe");
     if (pickaxe < index && score >= cost) {
-        pickaxe = index;
-        score -= cost + 1;
-        setCookie("score", score, 3650)
-        moan()
-        if (index == 1){
-            pickaxeimg.src = "FOWTNAITPIKAX.jpg"
-        }
-        else if (index == 2){
-            pickaxeimg.src = "pikaxstel.png"
-        }
-        else if (index == 3){
-            pickaxeimg.src = "kinda cool pikax.webp"
-        }
-        else if (index == 4){
-            pickaxeimg.src = "minecraft ender pikax.jpg"
-        }
-        else if (index == 5){
-            pickaxeimg.src = "borgir.jpg"
-        }
-        else if (index == 6){
-            pickaxeimg.src = "LOOK MOM I MADE IMG.jpg"
-        }
-        else if (index == 7){
-            pickaxeimg.src = "Windows-XP.jpg"
-        }
-        else if (index == 8){
-            pickaxeimg.src = "warcrime-er 6000.jpg"
-        }
-        else if (index == 9){
-            pickaxeimg.src = "Gold pikax.jpg"
-        }
-        else if (index == 10){
-            pickaxeimg.src = "axe.png"
-        }
-        else if (index == 11){
-            pickaxeimg.src = "cave drawings.jpg"
-        }
-        else if (index == 12){
-            pickaxeimg.src = "nerd.jpg"
+        if (mega >= megacost){
+            pickaxe = index;
+            mega -= megacost + 1;
+            setCookie("mega", mega, 3650)
+            moan()
+            if (index == 1){
+                pickaxeimg.src = "FOWTNAITPIKAX.jpg"
+            }
+            else if (index == 2){
+                pickaxeimg.src = "pikaxstel.png"
+            }
+            else if (index == 3){
+                pickaxeimg.src = "kinda cool pikax.webp"
+            }
+            else if (index == 4){
+                pickaxeimg.src = "minecraft ender pikax.jpg"
+            }
+            else if (index == 5){
+                pickaxeimg.src = "borgir.jpg"
+            }
+            else if (index == 6){
+                pickaxeimg.src = "LOOK MOM I MADE IMG.jpg"
+            }
+            else if (index == 7){
+                pickaxeimg.src = "Windows-XP.jpg"
+            }
+            else if (index == 8){
+                pickaxeimg.src = "warcrime-er 6000.jpg"
+            }
+            else if (index == 9){
+                pickaxeimg.src = "Gold pikax.jpg"
+            }
+            else if (index == 10){
+                pickaxeimg.src = "axe.png"
+            }
+            else if (index == 11){
+                pickaxeimg.src = "cave drawings.jpg"
+            }
+            else if (index == 12){
+                pickaxeimg.src = "nerd.jpg"
+            }
+            else if (index == 13){
+                pickaxeimg.src = "amazon.com.jpg"
+            }
         }
     }
     setCookie("pickaxe", String(pickaxe), 3650);
