@@ -158,7 +158,7 @@ function buymegamoan(){
         for (let i = 0; i < 6; i++){
             megamoans[i].play();
         }
-        //bibchlx
+        
         var scorecounter = document.getElementById("counter");
         megacounter = document.getElementById("megacounter");
         megacounter.innerText = "MegaMoans: " + String(mega) + "  ";
