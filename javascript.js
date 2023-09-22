@@ -167,13 +167,13 @@ function moan(){
     if (score > 10000000) {
         compliments.innerText = "Du gjorde det fandme. Jeg har ondt af dig.";
     }
-    if (score > 5000000) {
+    else if (score > 5000000) {
         compliments.innerText = "https://psykologeridanmark.dk";
     }
-    if (score > 1000000) {
+    else if (score > 1000000) {
         compliments.innerText = "Du deltager nu i bandeskyderier om Cookie clicker VS Bokaj Simulator";
     }
-    if (score > 500000) {
+    else if (score > 500000) {
         compliments.innerText = "Du har spillet Bokaj Simulator så lang tid at du har glemt hvordan man læser";
     }
     else if (score > 100000) {
