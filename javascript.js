@@ -7,6 +7,7 @@ var pickaxe = 0;
 var sword = 0;
 
 var score = 0;
+var mega = 0;
 
 var bokajimage = document.getElementById("bokajimg");
 
@@ -48,6 +49,15 @@ function updateScore() {
         score = 0;
 
     }
+    let mega_ = getCookie("mega");
+    if (mega_ != "") {
+        mega = parseInt(mega_);
+
+    } else {
+        setCookie("mega", "0", 3650);
+        mega = 0;
+
+    }
     console.log("Pickaxe at start", getCookie("pickaxe"))
     let pickaxe_ = getCookie("pickaxe");
     if (pickaxe_ != "") {
@@ -79,17 +89,6 @@ function updateScore() {
     }
 }
 
-// function checkCookie() {
-//     let user = getCookie("username");
-//     if (user != "") {
-//       alert("Welcome again " + user);
-//     } else {
-//       user = prompt("Please enter your name:", "");
-//       if (user != "" && user != null) {
-//         setCookie("username", user, 365);
-//       }
-//     }
-//   } 
 
 function setpickaxe(index, cost){
     var pickaxeimg = document.getElementById("pickaxe");
@@ -131,6 +130,9 @@ function setpickaxe(index, cost){
         else if (index == 11){
             pickaxeimg.src = "cave drawings.jpg"
         }
+        else if (index == 12){
+            pickaxeimg.src = "nerd.jpg"
+        }
     }
     setCookie("pickaxe", String(pickaxe), 3650);
 }
@@ -145,15 +147,13 @@ function setsword(index, cost){
 
 function moan(){
 
-    console.log("score: ",score);
-    console.log("pikax: ",pickaxe);
-
     var scorecounter = document.getElementById("counter");
     score += powers[pickaxe];
     scorecounter.innerText = "Stønne score: " + String(score);
-
+    mega += 1;
+    setCookie("mega", String(mega), 3650);
     setCookie("score", String(score), 3650);
-    console.log(getCookie("pickaxe"));
+    console.log("MegaMoan cookie: ", getCookie("mega"), " MegaMoan var: ", mega);
 
     let num = Math.ceil(Math.random()*6)
     var newmoan = moans[num-1]
