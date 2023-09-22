@@ -125,6 +125,12 @@ function setpickaxe(index, cost){
         else if (index == 9){
             pickaxeimg.src = "Gold pikax.jpg"
         }
+        else if (index == 10){
+            pickaxeimg.src = "axe.png"
+        }
+        else if (index == 11){
+            pickaxeimg.src = "cave drawings.jpg"
+        }
     }
     setCookie("pickaxe", String(pickaxe), 3650);
 }
