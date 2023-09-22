@@ -158,6 +158,7 @@ function buymegamoan(){
         for (let i = 0; i < 6; i++){
             megamoans[i].play();
         }
+        megacounter.innerText = "MegaMoans: " + String(mega) + "  ";
     }
 }
 
