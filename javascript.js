@@ -3,7 +3,7 @@ const audio = new Audio("./cat-meow-14536.mp3");
 var megabuy = document.getElementById("megabuy");
 var megacounter = document.getElementById("megacounter");
 const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./moan3.mp3"),new Audio("./moan4.mp3"),new Audio("./moan5.mp3"),new Audio("./moan6.mp3")];
-var powers = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 20000, 100000, 1000000, 100000000];
+var powers = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 20000, 100000, 400000, 1000000];
 const megamoans = [new Audio("./megamoan1.mp3"),new Audio("./megamoan2.mp3"),new Audio("./megamoan3.mp3"),new Audio("./megamoan4.mp3"),new Audio("./megamoan5.mp3"),new Audio("./megamoan6.mp3")];
 
 
@@ -80,6 +80,8 @@ function updateScore() {
 
     setCookie("score", String(score), 3650);
 
+    megacounter = document.getElementById("megacounter");
+    megacounter.innerText = "MegaMoans: " + String(mega) + "  ";
   } 
 
   function deleteAllCookies() {
@@ -140,6 +142,9 @@ function setpickaxe(index, cost, megacost = 0){
             }
             else if (index == 13){
                 pickaxeimg.src = "amazon.com.jpg"
+            }
+            else if (index == 14){
+                pickaxeimg.src = "Spectral-Axe_S.jpg"
             }
         }
     }
