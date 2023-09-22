@@ -169,8 +169,6 @@ function moan(){
     var scorecounter = document.getElementById("counter");
     score += powers[pickaxe];
     scorecounter.innerText = "Stønne score: " + String(score);
-    mega += 1;
-    setCookie("mega", String(mega), 3650);
     setCookie("score", String(score), 3650);
     console.log(score, "            ", getCookie("score"));
 
