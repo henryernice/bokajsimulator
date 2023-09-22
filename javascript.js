@@ -1,7 +1,11 @@
 const audio = new Audio("./cat-meow-14536.mp3");
 
-const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./moan3.mp3"),new Audio("./moan4.mp3"),new Audio("./moan5.mp3"),new Audio("./moan6.mp3")]
-var powers = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 20000, 100000, 1000000, 100000000]
+const megabuy = document.getElementById("megabuy");
+const megacounter = document.getElementById("megacounter");
+const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./moan3.mp3"),new Audio("./moan4.mp3"),new Audio("./moan5.mp3"),new Audio("./moan6.mp3")];
+var powers = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 20000, 100000, 1000000, 100000000];
+const megamoans = [new Audio("./megamoan1.mp3"),new Audio("./megamoan2.mp3"),new Audio("./megamoan3.mp3"),new Audio("./megamoan4.mp3"),new Audio("./megamoan5.mp3"),new Audio("./megamoan6.mp3")];
+
 
 var pickaxe = 0;
 var sword = 0;
@@ -144,6 +148,18 @@ function setsword(index, cost){
     }
 }
 
+function buymegamoan(){
+    if (getCookie("score") > 1000000000) {
+        mega += 1;
+        setCookie("mega", mega, 3650);
+        updateScore();
+        score -= 1000000000;
+        setCookie("score", score, 3650);
+        for (let i = 0; i < 6; i++){
+            megamoans[i].play();
+        }
+    }
+}
 
 function moan(){
 
@@ -153,7 +169,7 @@ function moan(){
     mega += 1;
     setCookie("mega", String(mega), 3650);
     setCookie("score", String(score), 3650);
-    console.log("MegaMoan cookie: ", getCookie("mega"), " MegaMoan var: ", mega);
+    console.log(score, "            ", getCookie("score"));
 
     let num = Math.ceil(Math.random()*6)
     var newmoan = moans[num-1]

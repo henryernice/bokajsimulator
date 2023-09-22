@@ -3,6 +3,12 @@
     src: url(comic-sans.woff);
 }
 
+.noicebutton{
+    background-color: #001b2f;
+    color: aliceblue;
+    font-size: medium;
+    font-family: comic-sans;
+}
 
 .cendiv{
     font-family: comic-sans;
