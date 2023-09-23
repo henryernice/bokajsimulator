@@ -6,7 +6,6 @@ const moans = [new Audio("./moan1.mp3"),new Audio("./moan2.mp3"),new Audio("./mo
 var powers = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 20000, 100000, 400000, 1000000];
 const megamoans = [new Audio("./megamoan1.mp3"),new Audio("./megamoan2.mp3"),new Audio("./megamoan3.mp3"),new Audio("./megamoan4.mp3"),new Audio("./megamoan5.mp3"),new Audio("./megamoan6.mp3")];
 
-
 var pickaxe = 0;
 var sword = 0;
 
@@ -165,9 +164,9 @@ function buymegamoan(){
         updateScore();
         score -= 1000000000;
         setCookie("score", score, 3650);
-        for (let i = 0; i < 6; i++){
-            megamoans[i].play();
-        }
+        let num = Math.ceil(Math.random()*6)
+        var newmoan = megamoans[num-1]
+        newmoan.play()
         
         var scorecounter = document.getElementById("counter");
         megacounter = document.getElementById("megacounter");
