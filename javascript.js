@@ -135,15 +135,18 @@ function setpickaxe(index, cost, megacost = 0){
                 pickaxeimg.src = "axe.png"
             }
             else if (index == 11){
-                pickaxeimg.src = "cave drawings.jpg"
+                pickaxeimg.src = "ai.png"
             }
             else if (index == 12){
-                pickaxeimg.src = "nerd.jpg"
+                pickaxeimg.src = "cave drawings.jpg"
             }
             else if (index == 13){
-                pickaxeimg.src = "amazon.com.jpg"
+                pickaxeimg.src = "nerd.jpg"
             }
             else if (index == 14){
+                pickaxeimg.src = "amazon.com.jpg"
+            }
+            else if (index == 15){
                 pickaxeimg.src = "Spectral-Axe_S.jpg"
             }
         }
