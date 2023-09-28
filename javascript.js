@@ -100,7 +100,8 @@ function setpickaxe(index, cost, megacost = 0){
     if (pickaxe < index && score >= cost) {
         if (mega >= megacost){
             pickaxe = index;
-            mega -= megacost + 1;
+            score -= cost + 1;
+            mega -= megacost;
             setCookie("mega", mega, 3650)
             moan()
             if (index == 1){
